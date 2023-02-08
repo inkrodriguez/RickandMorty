@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#51515A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutconstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="180dp">
+
+            <TextView
+                android:id="@+id/tvNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layoutSpecieandStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvNome">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardStatus"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="10dp" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Status"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tvSpecie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Specie"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lastknowlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Last Know Location:"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/layoutSpecieandStatus"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    app:layout_constraintTop_toBottomOf="@+id/lastknowlocation"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/firstseein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="First seen in:"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocation"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvSeen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seen"
+                    app:layout_constraintTop_toBottomOf="@id/firstseein"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
